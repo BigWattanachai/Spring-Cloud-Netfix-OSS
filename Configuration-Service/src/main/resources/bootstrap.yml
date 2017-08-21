@@ -1,0 +1,11 @@
+server:
+  port: 8585
+spring:
+  application:
+    name: configuration-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: /Users/BiG/Dropbox/config
+
