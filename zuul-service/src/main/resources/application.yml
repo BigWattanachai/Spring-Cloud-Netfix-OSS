@@ -1,0 +1,19 @@
+server:
+  port: 9999
+
+
+zuul:
+  ignored-services: '*'
+  routes:
+   product-service:
+     path: /products/**
+     stripPrefix: false
+
+eureka:
+   client:
+      serviceUrl:
+        defaultZone: http://localhost:8888/eureka/
+
+management:
+  security:
+    enabled: false
