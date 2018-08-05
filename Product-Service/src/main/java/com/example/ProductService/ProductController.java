@@ -23,7 +23,7 @@ public class ProductController {
 
     @GetMapping("/search")
     public Product getProductsBySKU(@RequestParam("sku") final String sku) {
-        log.info("get Product by SKU : {}" + sku);
+        log.info("get Product by SKU : {}" , sku);
 
         String url = "http://PRICING-SERVICE/products/price?sku=" + sku;
         return restTemplate.getForObject(url, Product.class);

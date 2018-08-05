@@ -21,7 +21,7 @@ public class PricingController {
 
     @GetMapping
     public Price getPrice(@RequestParam("sku") final String sku) {
-        log.info("get Price by SKU : {}" + sku);
+        log.info("get Price by SKU : {}" , sku);
         Price price = new Price();
         price.setSku(sku);
         price.setPrice(productPrice);
