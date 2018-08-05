@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("products/price")
 @RefreshScope
 public class PricingController {
-    private static Logger log = LoggerFactory.getLogger(PricingController.class);
+    private static final Logger log = LoggerFactory.getLogger(PricingController.class);
 
     @Value("${product.price}")
     String productPrice;
