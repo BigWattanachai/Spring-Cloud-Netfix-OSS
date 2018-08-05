@@ -1,6 +1,8 @@
 package com.example.PricingService;
 
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,11 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("products/price")
 @RefreshScope
 public class PricingController {
+    private static Logger log = LoggerFactory.getLogger(PricingController.class);
+
     @Value("${product.price}")
     String productPrice;
 
     @GetMapping
-    public Price getPrice(@RequestParam(value = "sku") final String sku) {
+    public Price getPrice(@RequestParam("sku") final String sku) {
+        log.info("get Price by SKU : {}" + sku);
         Price price = new Price();
         price.setSku(sku);
         price.setPrice(productPrice);
