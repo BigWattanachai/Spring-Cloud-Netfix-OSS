@@ -1,0 +1,16 @@
+--- 
+spring:
+    zipkin.baseUrl: http://localhost:9411
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: "http://localhost:8888/eureka/"
+management: 
+  security: 
+    enabled: false
+message: 
+  greeting: "Hello! Pricing-service configuration"
+product: 
+  price: 99.99
+server: 
+  port: 9000
