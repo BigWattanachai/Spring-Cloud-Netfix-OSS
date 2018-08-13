@@ -1,6 +1,9 @@
 server:
   port: 9999
 
+spring:
+    zipkin.baseUrl: http://localhost:9411
+    sleuth.sampler.percentage: 1
 
 zuul:
   ignored-services: '*'
@@ -17,3 +20,4 @@ eureka:
 management:
   security:
     enabled: false
+

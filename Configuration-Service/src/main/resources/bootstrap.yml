@@ -7,5 +7,5 @@ spring:
     config:
       server:
         git:
-          uri: /Users/BiG/Dropbox/config
+          uri: /Users/wattanachai.p/Documents/big/Sleuth-Zipkin-ELK/Configuration
 
